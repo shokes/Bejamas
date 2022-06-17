@@ -4,7 +4,6 @@ const Hero = function () {
   const featuredProduct = products.filter(
     (product) => product.featured === true
   );
-  console.log(featuredProduct);
 
   const {
     name,
@@ -17,7 +16,7 @@ const Hero = function () {
       size,
     },
   } = featuredProduct[0];
-  console.log(size);
+
   return (
     <section className='mt-7'>
       <div className='flex items-center justify-between mb-5'>
@@ -37,7 +36,7 @@ const Hero = function () {
           <h3 className='font-bold text-[22px] leading-[23.94px] mb-3'>
             About the {name}
           </h3>
-          <h2 className='font-bold text-[22px] leading-[23.94px] text-[#656565] mb-3'>
+          <h2 className='font-bold text-[22px] leading-[23.94px] text-[#656565] mb-3 capitalize'>
             {category}
           </h2>
           <p className='font-normal text-[18px] leading-[27px] text-[#656565]'>
@@ -74,6 +73,7 @@ const Hero = function () {
           </div>
         </div>
       </div>
+      <div className='border-[#E4E4E4] border-b-4 w-full mt-14 mb-14 '></div>
     </section>
   );
 };

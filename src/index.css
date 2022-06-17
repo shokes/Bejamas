@@ -16,7 +16,15 @@ body {
   margin: 30px auto 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.image-container button {
+  opacity: 0;
+  transition: all 0.9s;
+}
+
+.image-container:hover button {
+  opacity: 1;
+}
+
+.pagin {
+  color: black;
 }

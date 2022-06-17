@@ -26,7 +26,7 @@ const Header = function () {
           <BsCartDash className='w-[54px] h-[37.97px]' />
         </div>
       </nav>
-      <hr />
+      <div className='border-[#E4E4E4] border-b-4 w-full '></div>
     </section>
   );
 };
