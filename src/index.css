@@ -13,6 +13,7 @@ body {
 
 .container {
   max-width: 1281px;
+
   margin: 30px auto 0 auto;
 }
 
@@ -31,7 +32,7 @@ body {
 
 @media (max-width: 83em) {
   .container {
-    max-width: 60rem;
+    max-width: 90%;
     margin: 30px auto 0 auto;
   }
 }
@@ -39,10 +40,5 @@ body {
 @media (max-width: 63em) {
   html {
     font-size: 95%;
-  }
-
-  .container {
-    max-width: 382px;
-    margin: 30px auto 0 auto;
   }
 }

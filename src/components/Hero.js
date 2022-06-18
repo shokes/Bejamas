@@ -50,14 +50,14 @@ const Hero = function () {
           <h3 className='lg:text-end mt-7 mb-7 font-bold text-[22px] leading-[23.94px] lg:mb-3'>
             People also buy
           </h3>
-          <div className='flex gap-5 justify-end'>
+          <div className='flex gap-5 lg:justify-end'>
             {recommendations.map((img, index) => {
               return (
                 <img
                   key={index}
                   src={img.src}
                   alt={img.alt}
-                  className='w-[117px] h-[147px] mb-10  '
+                  className='w-[6rem] lg:w-[117px] h-[147px] mb-10  '
                 />
               );
             })}

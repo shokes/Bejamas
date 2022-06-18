@@ -216,7 +216,7 @@ const Products = function () {
                     alt={alt}
                     className='w-full lg:w-[281.72px] h-[390.67px] mb-2'
                   />
-                  <button className='uppercase bg-black font-medium text-white text-[23px] leading-[25.02px] tracking-[0.07em] block absolute bottom-0 py-1 w-[281.72px]'>
+                  <button className='uppercase bg-black font-medium text-white text-[23px] leading-[25.02px] tracking-[0.07em] block absolute bottom-0 py-1 w-full lg:w-[281.72px]'>
                     add to cart
                   </button>
                   {bestseller && (
