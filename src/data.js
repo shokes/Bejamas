@@ -264,7 +264,7 @@ const products = [
       src: 'https://images.pexels.com/photos/77171/pexels-photo-77171.jpeg?auto=compress&cs=tinysrgb&w=600',
       alt: 'london',
     },
-    bestseller: false,
+    bestseller: true,
     featured: false,
     details: null,
   },
@@ -347,7 +347,7 @@ const products = [
   {
     id: 19,
     name: 'chef',
-    category: 'lifestyle',
+    category: 'nature',
     price: 119,
     currency: 'USD',
     dimmentions: {
@@ -358,7 +358,7 @@ const products = [
       src: 'https://images.pexels.com/photos/1153369/pexels-photo-1153369.jpeg?auto=compress&cs=tinysrgb&w=600',
       alt: 'chef',
     },
-    bestseller: false,
+    bestseller: true,
     featured: false,
     details: null,
   },
@@ -394,7 +394,7 @@ const products = [
       src: 'https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=600',
       alt: 'coding man',
     },
-    bestseller: false,
+    bestseller: true,
     featured: false,
     details: null,
   },
@@ -448,7 +448,7 @@ const products = [
       src: 'https://images.pexels.com/photos/380330/pexels-photo-380330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Architecture',
     },
-    bestseller: false,
+    bestseller: true,
     featured: false,
     details: null,
   },
@@ -473,4 +473,26 @@ const products = [
   },
 ];
 
-export default products;
+const price = [
+  {
+    id: 1,
+    range: 'Lower than $20',
+  },
+
+  {
+    id: 2,
+    range: '$20 - $100',
+  },
+
+  {
+    id: 3,
+    range: '$100 - $200',
+  },
+
+  {
+    id: 4,
+    range: 'More than $200',
+  },
+];
+
+export { products, price };

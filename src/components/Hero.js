@@ -1,4 +1,4 @@
-import products from '../data';
+import { products, price } from '../data';
 
 const Hero = function () {
   const featuredProduct = products.filter(
@@ -21,7 +21,7 @@ const Hero = function () {
     <section className='mt-7'>
       <div className='flex items-center justify-between mb-5'>
         <h3 className='text-[32px] font-bold leading-[34.82px]'>{name}</h3>
-        <button className='uppercase bg-black font-medium text-white text-[23px] leading-[25px] tracking-[0.07em] py-2 px-4'>
+        <button className='hidden lg:block uppercase bg-black font-medium text-white text-[23px] leading-[25px] tracking-[0.07em] py-2 px-4'>
           add to cart
         </button>
       </div>
@@ -31,8 +31,11 @@ const Hero = function () {
           Photo of the day
         </p>
       </div>
-      <div className=' flex  justify-between'>
-        <div className='w-1/2'>
+      <button className=' lg:hidden uppercase w-full bg-black font-medium text-white text-[23px] leading-[25px] tracking-[0.07em] py-3 px-4 mb-7'>
+        add to cart
+      </button>
+      <div className=' lg:flex  justify-between'>
+        <div className='lg:w-1/2'>
           <h3 className='font-bold text-[22px] leading-[23.94px] mb-3'>
             About the {name}
           </h3>
@@ -43,8 +46,8 @@ const Hero = function () {
             {desc}
           </p>
         </div>
-        <div className='w-1/2 justify-self-end '>
-          <h3 className='text-end font-bold text-[22px] leading-[23.94px] mb-3'>
+        <div className='lg:w-1/2 lg:justify-self-end '>
+          <h3 className='lg:text-end mt-7 mb-7 font-bold text-[22px] leading-[23.94px] lg:mb-3'>
             People also buy
           </h3>
           <div className='flex gap-5 justify-end'>
@@ -59,7 +62,7 @@ const Hero = function () {
               );
             })}
           </div>
-          <div className='text-end'>
+          <div className='lg:text-end'>
             <h3 className='font-bold text-[22px] leading-[23.94px] mb-3'>
               Details
             </h3>
