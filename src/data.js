@@ -62,7 +62,7 @@ const products = [
 
   {
     id: 5,
-    name: 'Samurai King Restling',
+    name: 'Samurai King Resting',
     category: 'landmarks',
     price: 101,
     currency: 'USD',

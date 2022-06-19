@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
 }
 
 .container {
@@ -32,12 +33,10 @@ body {
 
 @media (max-width: 83em) {
   .container {
-    max-width: 90%;
+    max-width: 84%;
     margin: 30px auto 0 auto;
   }
-}
 
-@media (max-width: 63em) {
   html {
     font-size: 95%;
   }

@@ -109,7 +109,7 @@ const Products = function () {
 
   return (
     <section className='relative'>
-      <div className='flex items-center justify-between mb-14'>
+      <div className='flex items-center justify-between mb-4 lg:mb-14'>
         <div>
           <h3 className='font-[700] leading-[19.58px] lg:leading-[32.64px] text-[18px] lg:text-[30px]  capitalize'>
             photography /{' '}
@@ -117,7 +117,7 @@ const Products = function () {
           </h3>
         </div>
         <AiOutlineMenuUnfold
-          className='w-7 h-10 lg:hidden'
+          className='w-7 h-10 lg:hidden cursor-pointer'
           onClick={() => setIsOpen(true)}
         />
 
@@ -141,9 +141,28 @@ const Products = function () {
           </select>
         </div>
       </div>
+      <div className='flex lg:hidden gap-x-2 mb-7 items-center'>
+        <span onClick={sort}>
+          <RiArrowUpDownLine />
+        </span>
+
+        <p className='font-[400] leading-[19.58px] text-[18px] text-[#9B9B9B] capitalize'>
+          sort by
+        </p>
+        <select
+          name='
+                  '
+          id=''
+          className='font-[400] leading-[19.58px] text-[18px] text-[#000] w-[5rem] capitalize'
+          onChange={(e) => setSortTerm(e.target.value)}
+        >
+          <option value='price'>price</option>
+          <option value='alphabetically'>alphabetically</option>
+        </select>
+      </div>
       <div className='flex justify-between'>
         <div className='hidden lg:block'>
-          <h4 className='font-[700] leading-[23.94px] text-[22px] capitalize mb-10'>
+          <h4 className='font-[700] leading-[23.94px] text-[22px] capitalize mb-14'>
             category
           </h4>
 
@@ -155,7 +174,7 @@ const Products = function () {
               return (
                 <div
                   key={index}
-                  className='flex items-center gap-x-4 capitalize font-[400] leading-[23.94px] text-[22px] mb-5'
+                  className='flex items-center gap-x-4 capitalize font-[400] leading-[23.94px] text-[22px] mb-7'
                 >
                   {' '}
                   <input
@@ -174,14 +193,14 @@ const Products = function () {
           </div>
           <div className='border-[#E4E4E4] border-b-4  w-[9rem] lg:w-[268px] mt-10'></div>
           <div>
-            <h4 className='font-[700] leading-[23.94px] text-[22px] mb-10 mt-10'>
+            <h4 className='font-[700] leading-[23.94px] text-[22px] mb-10 mt-14'>
               Price range
             </h4>
             {price.map((item) => {
               return (
                 <div
                   key={item.id}
-                  className='flex items-center gap-x-4  font-[400] leading-[23.94px] text-[22px] mb-5'
+                  className='flex items-center gap-x-4  font-[400] leading-[23.94px] text-[22px] mb-7'
                 >
                   {' '}
                   <input
@@ -274,14 +293,17 @@ const Products = function () {
       {isOpen && (
         <Zoom>
           <div
-            className='bg-white z-40 p-2 absolute top-[3rem] w-full
+            className='bg-white z-40 p-3 absolute top-[3rem] w-full
     '
           >
             <div className='flex items-center justify-between'>
               <h4 className='font-[700] leading-[23.94px] text-[22px] mb-5 mt-5'>
                 Filter
               </h4>
-              <GrClose className='w-7 h-10' onClick={() => setIsOpen(false)} />
+              <GrClose
+                className='w-7 h-10 cursor-pointer'
+                onClick={() => setIsOpen(false)}
+              />
             </div>
 
             {nonFeatured.map((item) => {
@@ -309,7 +331,7 @@ const Products = function () {
                 );
               })}
             </div>
-            {/* <div className='border-[#E4E4E4] border-b-4 w-[268px] mt-10'></div> */}
+            <div className='border-[#E4E4E4] border-b-4 w-[268px] mt-10'></div>
             <div>
               <h4 className='font-[700] leading-[23.94px] text-[22px] mb-10 mt-10'>
                 Price range
@@ -333,12 +355,12 @@ const Products = function () {
                 );
               })}
             </div>
-            {/* <div className='border-[#E4E4E4] border-b-4 w-[268px] mt-10'></div> */}
+            <div className='border-[#E4E4E4] border-b-4 w-[268px] mb-5'></div>
             <div className='flex justify-between items-center '>
-              <button className='border border-black uppercase py-2 px-7'>
+              <button className='border-[3px] border-black uppercase py-2 px-7'>
                 clear
               </button>
-              <button className='uppercase text-white bg-black py-2 px-7'>
+              <button className='uppercase border-[3px] border-black text-white bg-black py-2 px-7'>
                 save
               </button>
             </div>
