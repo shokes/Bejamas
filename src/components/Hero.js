@@ -54,7 +54,7 @@ const Hero = function () {
           <h3 className='lg:text-end mt-7 mb-7 font-bold text-[22px] leading-[23.94px] lg:mb-3'>
             People also buy
           </h3>
-          <div className='flex gap-x-3 lg:gap-x-7 lg:justify-end '>
+          <div className='grid grid-cols-3 lg:flex gap-x-3 lg:gap-x-7 lg:justify-end '>
             {recommendations.map((img, index) => {
               return (
                 <img

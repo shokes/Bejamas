@@ -1,4 +1,3 @@
-// import products from '../data';
 import { products, price } from '../data';
 import { RiArrowUpDownLine } from 'react-icons/ri';
 import { useEffect, useState } from 'react';
@@ -141,12 +140,12 @@ const Products = function () {
           </select>
         </div>
       </div>
-      <div className='flex lg:hidden gap-x-2 mb-7 items-center'>
-        <span onClick={sort}>
+      <div className='flex lg:hidden  mb-7 items-center'>
+        <span onClick={sort} className='mr-2'>
           <RiArrowUpDownLine />
         </span>
 
-        <p className='font-[400] leading-[19.58px] text-[18px] text-[#9B9B9B] capitalize'>
+        <p className='font-[400] leading-[19.58px] text-[18px] mr-2 text-[#9B9B9B] capitalize'>
           sort by
         </p>
         <select
@@ -259,10 +258,10 @@ const Products = function () {
           })}
         </div>
       </div>
-      <div className='justify-center flex gap-x-3 items-center pb-10 pt-20 '>
+      <div className='justify-center flex lg:gap-x-3 items-center pb-10 pt-20 '>
         {page !== 0 ? (
           <MdOutlineKeyboardArrowLeft
-            className=' text-[29px] cursor-pointer'
+            className=' text-[29px] cursor-pointer mr-3 lg:mr-0'
             onClick={() => prevPage(page)}
           />
         ) : null}
@@ -270,7 +269,7 @@ const Products = function () {
         {data.map((item, index) => {
           return (
             <button
-              className={` font-[400] leading-[31.55px] text-[29px] text-[#B4B4B4] ${
+              className={` font-[400] mr-3 lg:mr-0 leading-[31.55px] text-[29px] text-[#B4B4B4] ${
                 index === page ? 'pagin' : null
               }`}
               key={index}
@@ -314,14 +313,14 @@ const Products = function () {
                 return (
                   <div
                     key={index}
-                    className='flex items-center gap-x-4 capitalize font-[400] leading-[23.94px] text-[22px] mb-5'
+                    className='flex items-center lg:gap-x-4 capitalize font-[400] leading-[23.94px] text-[22px] mb-5'
                   >
                     {' '}
                     <input
                       type='checkbox'
                       name={item}
                       value={item}
-                      className='w-[23px] h-[23px]'
+                      className='w-[23px] h-[23px] mr-4 lg:mr-0'
                       onChange={(e) => {
                         handleCheckbox(e.target.value);
                       }}
@@ -340,14 +339,14 @@ const Products = function () {
                 return (
                   <div
                     key={item.id}
-                    className='flex items-center gap-x-4  font-[400] leading-[23.94px] text-[22px] mb-5'
+                    className='flex items-center lg:gap-x-4  font-[400] leading-[23.94px] text-[22px] mb-5'
                   >
                     {' '}
                     <input
                       type='checkbox'
                       name={item.range}
                       value={item.range}
-                      className='w-[23px] h-[23px]'
+                      className='w-[23px] h-[23px] mr-4 lg:mr-0'
                       onChange={(e) => handlePrice(e.target.value)}
                     />
                     <label htmlFor={item.range}>{item.range}</label>
